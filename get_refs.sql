@@ -1,7 +1,7 @@
-CREATE OR REPLACE FUNCTION public.get_refs(v_table_name text, link_id bigint)
- RETURNS TABLE(sql text, id text)
- LANGUAGE plpgsql
-AS $function$
+create or replace function public.get_refs(v_table_name text, link_id bigint)
+ returns table(sql text, id text)
+ language plpgsql
+as $function$
 declare
     row    record;
     result record;
